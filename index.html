@@ -214,8 +214,8 @@
             { title: "Current Time", info: "3:41 PM." },
             { title: "Address of Origin", info: "210 N Sherman Ave, Sioux Falls, SD 57103." },
             { title: "Address of Destination", info: "707 N Grange Ave, Sioux Falls, SD 57104." },
-            { title: "Distance to Destination", info: "28.8" },
-            { title: "Estimated Time to Destination", info: "40" },
+            { title: "Distance to Destination", info: "2.02 miles." },
+            { title: "Estimated Time to Destination", info: "8 minutes." },
             { title: "State of Charge of Battery", info: "27% charge." },
             { title: "Range of Current Battery", info: "81 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "60 miles." },
@@ -233,10 +233,10 @@
                 name: 'Railyard Flats',
 
                 location: '440 E 8th St, Sioux Falls 57103',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '0.89',
+                originTime: '3',
+                destDistance: '1.37',
+                destTime: '7',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -272,10 +272,10 @@
                 name: 'PLStation Paloft',
 
                 location: '616 N Main Ave, Sioux Falls 57104',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '1.34',
+                originTime: '5',
+                destDistance: '0.72',
+                destTime: '3',
 
                 
                 waitTime: [
@@ -938,8 +938,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
